@@ -1,0 +1,73 @@
+{
+  "name": "Collection Méga-Évolution",
+  "description": "Toutes les méga-pierres principales pour débuter avec les mégas",
+  "author": "MiniMax Agent",
+  "created": "2025-10-19",
+  "items": [
+    {
+      "id": 658,
+      "name": "Charizardite X",
+      "quantity": 1
+    },
+    {
+      "id": 659,
+      "name": "Charizardite Y",
+      "quantity": 1
+    },
+    {
+      "id": 660,
+      "name": "Venusaurite",
+      "quantity": 1
+    },
+    {
+      "id": 661,
+      "name": "Blastoisinite",
+      "quantity": 1
+    },
+    {
+      "id": 662,
+      "name": "Lucarionite",
+      "quantity": 1
+    },
+    {
+      "id": 663,
+      "name": "Garchompite",
+      "quantity": 1
+    },
+    {
+      "id": 664,
+      "name": "Méwtwoïte X",
+      "quantity": 1
+    },
+    {
+      "id": 665,
+      "name": "Méwtwoïte Y",
+      "quantity": 1
+    },
+    {
+      "id": 666,
+      "name": "Rayquazite",
+      "quantity": 1
+    },
+    {
+      "id": 700,
+      "name": "Zeroarite",
+      "quantity": 1
+    },
+    {
+      "id": 701,
+      "name": "Zoroarkite",
+      "quantity": 1
+    },
+    {
+      "id": 702,
+      "name": "Serperiorite",
+      "quantity": 1
+    },
+    {
+      "id": 703,
+      "name": "Emboarite",
+      "quantity": 1
+    }
+  ]
+}

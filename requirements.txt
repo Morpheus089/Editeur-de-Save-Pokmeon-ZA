@@ -1,0 +1,14 @@
+# Dépendances principales pour Pokemon Legends Z-A Save Editor
+# Interface graphique (généralement inclus avec Python)
+# tkinter est inclus dans la distribution standard de Python
+
+# Aucune dépendance externe requise
+# Toutes les fonctionnalités utilisent des modules Python standard :
+# - tkinter pour l'interface graphique
+# - json pour la sérialisation
+# - os, sys pour les opérations système
+# - threading pour la gestion des threads
+# - shutil pour les opérations de fichiers
+
+# Pour le développement (optionnel)
+# pyinstaller>=5.0  # Pour créer l'exécutable

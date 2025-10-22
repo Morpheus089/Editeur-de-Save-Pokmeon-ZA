@@ -1,0 +1,113 @@
+{
+  "name": "Explorateur de Lumiose",
+  "description": "Tout ce qu'il faut pour explorer efficacement la région de Lumiose",
+  "author": "MiniMax Agent",
+  "created": "2025-10-19",
+  "items": [
+    {
+      "id": 2,
+      "name": "Ultra Ball",
+      "quantity": 50
+    },
+    {
+      "id": 3,
+      "name": "Great Ball",
+      "quantity": 99
+    },
+    {
+      "id": 4,
+      "name": "Poké Ball",
+      "quantity": 99
+    },
+    {
+      "id": 6,
+      "name": "Filet Ball",
+      "quantity": 30
+    },
+    {
+      "id": 7,
+      "name": "Scuba Ball",
+      "quantity": 20
+    },
+    {
+      "id": 8,
+      "name": "Faiblo Ball",
+      "quantity": 30
+    },
+    {
+      "id": 10,
+      "name": "Chrono Ball",
+      "quantity": 30
+    },
+    {
+      "id": 13,
+      "name": "Sombre Ball",
+      "quantity": 30
+    },
+    {
+      "id": 15,
+      "name": "Rapide Ball",
+      "quantity": 30
+    },
+    {
+      "id": 17,
+      "name": "Potion",
+      "quantity": 30
+    },
+    {
+      "id": 18,
+      "name": "Super Potion",
+      "quantity": 25
+    },
+    {
+      "id": 19,
+      "name": "Hyper Potion",
+      "quantity": 20
+    },
+    {
+      "id": 24,
+      "name": "Antidote",
+      "quantity": 15
+    },
+    {
+      "id": 25,
+      "name": "Anti-Para",
+      "quantity": 15
+    },
+    {
+      "id": 26,
+      "name": "Anti-Brûle",
+      "quantity": 15
+    },
+    {
+      "id": 27,
+      "name": "Anti-Gel",
+      "quantity": 15
+    },
+    {
+      "id": 28,
+      "name": "Réveil",
+      "quantity": 15
+    },
+    {
+      "id": 80,
+      "name": "Corde Sortie",
+      "quantity": 10
+    },
+    {
+      "id": 81,
+      "name": "Repousse",
+      "quantity": 20
+    },
+    {
+      "id": 82,
+      "name": "Super Repousse",
+      "quantity": 15
+    },
+    {
+      "id": 83,
+      "name": "Max Repousse",
+      "quantity": 10
+    }
+  ]
+}

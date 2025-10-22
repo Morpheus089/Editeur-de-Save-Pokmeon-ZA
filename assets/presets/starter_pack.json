@@ -1,0 +1,48 @@
+{
+  "name": "Pack de Démarrage",
+  "description": "Objets essentiels pour commencer l'aventure dans Lumiose",
+  "author": "MiniMax Agent",
+  "created": "2025-10-19",
+  "items": [
+    {
+      "id": 1,
+      "name": "Master Ball",
+      "quantity": 5
+    },
+    {
+      "id": 2,
+      "name": "Ultra Ball",
+      "quantity": 30
+    },
+    {
+      "id": 3,
+      "name": "Great Ball",
+      "quantity": 50
+    },
+    {
+      "id": 4,
+      "name": "Poké Ball",
+      "quantity": 99
+    },
+    {
+      "id": 17,
+      "name": "Potion",
+      "quantity": 20
+    },
+    {
+      "id": 18,
+      "name": "Super Potion",
+      "quantity": 15
+    },
+    {
+      "id": 19,
+      "name": "Hyper Potion",
+      "quantity": 10
+    },
+    {
+      "id": 20,
+      "name": "Potion Max",
+      "quantity": 5
+    }
+  ]
+}

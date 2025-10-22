@@ -1,0 +1,83 @@
+{
+  "name": "Jardin de Baies",
+  "description": "Collection de baies utiles pour les soins et effets spéciaux",
+  "author": "MiniMax Agent",
+  "created": "2025-10-19",
+  "items": [
+    {
+      "id": 149,
+      "name": "Baie Oran",
+      "quantity": 50
+    },
+    {
+      "id": 150,
+      "name": "Baie Pêcha",
+      "quantity": 30
+    },
+    {
+      "id": 151,
+      "name": "Baie Fraive",
+      "quantity": 30
+    },
+    {
+      "id": 152,
+      "name": "Baie Willia",
+      "quantity": 30
+    },
+    {
+      "id": 153,
+      "name": "Baie Mépo",
+      "quantity": 30
+    },
+    {
+      "id": 154,
+      "name": "Baie Résin",
+      "quantity": 30
+    },
+    {
+      "id": 155,
+      "name": "Baie Sitrus",
+      "quantity": 20
+    },
+    {
+      "id": 156,
+      "name": "Baie Figuy",
+      "quantity": 15
+    },
+    {
+      "id": 157,
+      "name": "Baie Wiki",
+      "quantity": 15
+    },
+    {
+      "id": 158,
+      "name": "Baie Mago",
+      "quantity": 15
+    },
+    {
+      "id": 159,
+      "name": "Baie Gowav",
+      "quantity": 15
+    },
+    {
+      "id": 160,
+      "name": "Baie Papaya",
+      "quantity": 15
+    },
+    {
+      "id": 168,
+      "name": "Baie Enigma",
+      "quantity": 5
+    },
+    {
+      "id": 169,
+      "name": "Baie Micle",
+      "quantity": 5
+    },
+    {
+      "id": 170,
+      "name": "Baie Selve",
+      "quantity": 5
+    }
+  ]
+}

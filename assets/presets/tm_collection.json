@@ -1,0 +1,58 @@
+{
+  "name": "Collection CT Essentielle",
+  "description": "Les CT les plus utiles pour l'entraînement",
+  "author": "MiniMax Agent",
+  "created": "2025-10-19",
+  "items": [
+    {
+      "id": 328,
+      "name": "CT001 Charge",
+      "quantity": 1
+    },
+    {
+      "id": 329,
+      "name": "CT002 Griffe Dragon",
+      "quantity": 1
+    },
+    {
+      "id": 330,
+      "name": "CT003 Psykoud'Boul",
+      "quantity": 1
+    },
+    {
+      "id": 331,
+      "name": "CT004 Roulade",
+      "quantity": 1
+    },
+    {
+      "id": 332,
+      "name": "CT005 Boue-Bombe",
+      "quantity": 1
+    },
+    {
+      "id": 350,
+      "name": "CT025 Façade",
+      "quantity": 1
+    },
+    {
+      "id": 360,
+      "name": "CT035 Repos",
+      "quantity": 1
+    },
+    {
+      "id": 380,
+      "name": "CT055 Ébullition",
+      "quantity": 1
+    },
+    {
+      "id": 400,
+      "name": "CT075 Danse-Lames",
+      "quantity": 1
+    },
+    {
+      "id": 420,
+      "name": "CT095 Telluriforce",
+      "quantity": 1
+    }
+  ]
+}
