@@ -1,7 +1,3 @@
-"""
-Point d'entrée principal pour Pokemon Legends Z-A Save Editor
-"""
-
 import os
 import sys
 

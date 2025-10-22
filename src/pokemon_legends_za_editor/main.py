@@ -385,8 +385,8 @@ class PLZASaveEditor:
                 
     def get_item_name(self, item_id: int) -> str:
         """Obtenir le nom d'un objet par son ID"""
-        if str(item_id) in self.item_database:
-            return self.item_database[str(item_id)]["english_ui_name"]
+        if item_id in self.item_database:
+            return self.item_database[item_id]["english_ui_name"]
         return f"Objet Inconnu ({item_id})"
         
     def get_category_name(self, category) -> str:
@@ -444,25 +444,28 @@ class PLZASaveEditor:
             return
             
         dialog = ItemAddDialog(self.root, self.item_database)
+        self.root.wait_window(dialog.dialog)  # Attendre que le dialogue se ferme
+        
         if dialog.result:
             item_id, quantity = dialog.result
             try:
                 self.add_item(item_id, quantity)
                 self.update_items_list()
                 self.is_modified = True
-                self.update_status("Objet ajouté")
+                self.update_status(f"Objet ajouté: {self.get_item_name(item_id)} x{quantity}")
+                messagebox.showinfo("Succès", f"{self.get_item_name(item_id)} x{quantity} ajouté au sac!")
             except Exception as e:
                 messagebox.showerror("Erreur", f"Erreur lors de l'ajout: {str(e)}")
                 
     def add_item(self, item_id: int, quantity: int):
         """Ajouter un objet au sac"""
         if not self.bag_save:
-            return
+            raise ValueError("Aucune donnée de sac chargée")
             
-        if str(item_id) not in self.item_database:
+        if item_id not in self.item_database:
             raise ValueError(f"Objet ID {item_id} non trouvé dans la base de données")
             
-        expected_category = self.item_database[str(item_id)]["expected_category"]
+        expected_category = self.item_database[item_id]["expected_category"]
         
         entry = BagEntry()
         entry.quantity = quantity
@@ -563,8 +566,7 @@ class PLZASaveEditor:
         if messagebox.askyesno("Confirmer", "Ajouter tous les objets avec quantité x999 ?"):
             try:
                 added_count = 0
-                for item_id_str, item_data in self.item_database.items():
-                    item_id = int(item_id_str)
+                for item_id, item_data in self.item_database.items():
                     expected_category = item_data["expected_category"]
                     
                     entry = BagEntry()
@@ -596,8 +598,8 @@ class PLZASaveEditor:
             repaired_count = 0
             for i, entry in enumerate(self.bag_save.entries):
                 if entry.quantity > 0:
-                    if str(i) in self.item_database:
-                        expected_category = self.item_database[str(i)]["expected_category"]
+                    if i in self.item_database:
+                        expected_category = self.item_database[i]["expected_category"]
                         if entry.category != expected_category:
                             entry.category = expected_category
                             self.bag_save.set_entry(i, entry)
@@ -849,19 +851,27 @@ class ItemAddDialog:
         
     def populate_items(self):
         """Remplir la liste des objets"""
-        for item_id, item_data in sorted(self.item_database.items(), key=lambda x: int(x[0])):
+        for item_id, item_data in sorted(self.item_database.items(), key=lambda x: x[0]):
             category_names = {
-                0: "Aucune",
+                -1: "Corrompu",
+                0: "Médicaments",
                 1: "Poké Balls",
-                2: "Médicaments", 
-                3: "Baies",
-                4: "TM",
-                5: "Objets",
-                6: "Autres"
+                2: "Autres",
+                3: "Pickup",
+                4: "Objets Clés",
+                5: "Baies",
+                6: "CT",
+                7: "Méga"
             }
             
-            expected_category = item_data.get("expected_category", 0)
-            category_name = category_names.get(expected_category, f"Catégorie {expected_category}")
+            expected_category = item_data.get("expected_category")
+            # Récupérer la valeur de l'enum si c'est un CategoryType
+            if hasattr(expected_category, 'value'):
+                cat_value = expected_category.value
+            else:
+                cat_value = expected_category if expected_category is not None else 0
+            
+            category_name = category_names.get(cat_value, f"Catégorie {cat_value}")
             
             self.items_tree.insert("", "end", values=(
                 item_id,
@@ -878,20 +888,28 @@ class ItemAddDialog:
             self.items_tree.delete(item)
             
         # Repeupler avec les objets filtrés
-        for item_id, item_data in sorted(self.item_database.items(), key=lambda x: int(x[0])):
+        for item_id, item_data in sorted(self.item_database.items(), key=lambda x: x[0]):
             if search_term in item_data["english_ui_name"].lower():
                 category_names = {
-                    0: "Aucune",
-                    1: "Poké Balls", 
-                    2: "Médicaments",
-                    3: "Baies",
-                    4: "TM",
-                    5: "Objets",
-                    6: "Autres"
+                    -1: "Corrompu",
+                    0: "Médicaments",
+                    1: "Poké Balls",
+                    2: "Autres",
+                    3: "Pickup",
+                    4: "Objets Clés",
+                    5: "Baies",
+                    6: "CT",
+                    7: "Méga"
                 }
                 
-                expected_category = item_data.get("expected_category", 0)
-                category_name = category_names.get(expected_category, f"Catégorie {expected_category}")
+                expected_category = item_data.get("expected_category")
+                # Récupérer la valeur de l'enum si c'est un CategoryType
+                if hasattr(expected_category, 'value'):
+                    cat_value = expected_category.value
+                else:
+                    cat_value = expected_category if expected_category is not None else 0
+                
+                category_name = category_names.get(cat_value, f"Catégorie {cat_value}")
                 
                 self.items_tree.insert("", "end", values=(
                     item_id,
